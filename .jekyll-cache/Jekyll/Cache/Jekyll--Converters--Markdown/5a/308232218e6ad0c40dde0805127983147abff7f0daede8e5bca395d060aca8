@@ -1,0 +1,2 @@
+I"�<p>Recently I tried to update my centos 7 test machine. Unfortunatelly, <code class="language-plaintext highlighter-rouge">yum update</code> command returned the following error “At least 54MB more space needed on the /boot filesystem.”.</p>
+:ET

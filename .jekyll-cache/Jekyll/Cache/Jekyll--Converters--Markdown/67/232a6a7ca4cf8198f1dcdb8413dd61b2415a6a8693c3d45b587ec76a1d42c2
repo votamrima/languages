@@ -1,0 +1,63 @@
+I"�<h3 id="creating-a-vm">Creating a VM</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant init</code> – Initialize Vagrant with a Vagrantfile and ./.vagrant directory, using no specified base image. Beforeyou can do vagrant up, you’ll need to specify a base image in the Vagrantfile.</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant init</code> – Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it’s name with boxpath. For example, vagrant init ubuntu/trusty64.</li>
+</ul>
+
+<h3 id="starting-a-vm">Starting a VM</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant up</code> – starts vagrant environment (also provisions only on the FIRST vagrant up)</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant resume</code> – resume a suspended machine (vagrant up works just fine for this as well)</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant provision</code> – forces reprovisioning of the vagrant machine</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant reload</code> – restarts vagrant machine, loads new Vagrantfile configuration</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant reload --provision</code> – restart the virtual machine and force provisioning</li>
+</ul>
+
+<h3 id="getting-into-a-vm">Getting into a VM</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant ssh</code> – connects to machine via SSH</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant ssh</code> – If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory.</li>
+</ul>
+
+<h3 id="stopping-a-vm">Stopping a VM</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant halt</code> – stops the vagrant machine</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant suspend</code> – suspends a virtual machine (remembers state)</li>
+</ul>
+
+<h3 id="cleaning-up-a-vm">Cleaning Up a VM</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant destroy</code> – stops and deletes all traces of the vagrant machine</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant destroy -f</code> – same as above, without confirmation</li>
+</ul>
+
+<h3 id="boxes">Boxes</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant box list</code> – see a list of all installed boxes on your computer</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant box add</code> – download a box image to your computer</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant box outdated</code> – check for updates vagrant box update</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant boxes remove</code> – deletes a box from the machine</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant package</code> – packages a running virtualbox env in a reusable box</li>
+</ul>
+
+<h3 id="saving-progress">Saving Progress</h3>
+
+<p><code class="language-plaintext highlighter-rouge">-vagrant snapshot save [options] [vm-name]</code> – vm-name is often default. Allows us to save so that we can rollback at a later time</p>
+
+<h3 id="tips">Tips</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vagrant -v</code> – get the vagrant version</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant status</code> – outputs status of the vagrant machine</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant global-status</code> – outputs status of all vagrant machines</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant global-status</code> –prune – same as above, but prunes invalid entries</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant provision --debug</code> – use the debug flag to increase the verbosity of the output</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant push</code> – yes, vagrant can be configured to deploy code!</li>
+  <li><code class="language-plaintext highlighter-rouge">vagrant up --provision | tee provision.log</code> – Runs vagrant up, forces provisioning and logs all output to a file</li>
+</ul>
+
+<h3 id="plugins">Plugins</h3>
+<p><a href="https://github.com/cogitatio/vagrant-hostsupdater">vagrant-hostsupdater</a>: <code class="language-plaintext highlighter-rouge">$ vagrant plugin install vagrant-hostsupdater</code> to update your /etc/hosts file automatically each time you start/stop your vagrant box.</p>
+
+<h3 id="source">Source</h3>
+<p>Regularly check this <a href="https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4">source</a></p>
+:ET

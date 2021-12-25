@@ -1,0 +1,17 @@
+I"n<ol>
+  <li>create configuration file:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2# cat /etc/logrotate.d/myconf-logrotate.conf
+PATH_TO_FILE/LOG.FILE {
+daily
+missingok
+rotate 10
+compress
+delaycompress
+compresscmd /usr/bin/gzip
+notifempty
+copytruncate
+}
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET

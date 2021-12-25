@@ -1,0 +1,57 @@
+I"�<p>In this post I am trying to show how to configure hiera files on puppet master. For demonstration purpose I use a simple task that will create a folder. The main idea of this post is to get basic understand of hiera concept.</p>
+
+<ol>
+  <li>Look up where is stored the main hiera file:
+````
+puppet config print hiera_config</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+2. Edit it a found file vim $(puppet config print hiera_config):
+</code></pre></div></div>
+<hr />
+<h1 id="hiera-5-global-configuration-file">Hiera 5 Global configuration file</h1>
+<p>:backends:</p>
+<ul>
+  <li>yaml</li>
+</ul>
+
+<p>:hierarchy:</p>
+<ul>
+  <li>common</li>
+</ul>
+
+<p>:yaml:
+  :datadir: “/etc/puppetlabs/code/environments/%{environment}/hieradata”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+3. Hiera values for our test will be stored inside ``/etc/puppetlabs/code/environments/production/hieradata/common.yaml`` with the following content: 
+</code></pre></div></div>
+<hr />
+<p>fldr_name: ‘/opt/from_hiera’</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+3. A manifest that creates a folder using variable that stored in common.yaml. By default I am using sample ``init.pp`` file in ``/etc/puppetlabs/code/environments/production/manifests/init.pp``
+
+</code></pre></div></div>
+<hr />
+<p>class start_me (
+  $fldr_name,
+) {
+  file {‘Create test folder’:
+    ensure =&gt; ‘directory’,
+    path  =&gt; “${fldr_name}”,
+    force =&gt; true,
+  }
+}</p>
+
+<p>class { ‘start_me’:
+  fldr_name =&gt; hiera(‘fldr_name’)
+}</p>
+
+<p>````</p>
+
+<ol>
+  <li>And that is all</li>
+</ol>
+
+:ET

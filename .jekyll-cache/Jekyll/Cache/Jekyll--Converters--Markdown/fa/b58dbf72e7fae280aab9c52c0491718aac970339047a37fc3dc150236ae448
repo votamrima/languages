@@ -1,0 +1,38 @@
+I"a<ul>
+  <li>
+    <p>In the grub menu select actual kernel and type “-e”
+<img src="../images/reseting-root-password/pic-1.png" alt="IMAGE" /></p>
+  </li>
+  <li>
+    <p>Go to the line with “<code class="language-plaintext highlighter-rouge">linux 16</code>” and change <code class="language-plaintext highlighter-rouge">ro</code> to <code class="language-plaintext highlighter-rouge">rw init=/sysroot/bin/sh</code>”.</p>
+  </li>
+</ul>
+
+<p>before:
+<img src="../images/reseting-root-password/pic-2.png" alt="IMAGE" /></p>
+
+<p>after: 
+<img src="../images/reseting-root-password/pic-3.png" alt="IMAGE" /></p>
+
+<ul>
+  <li>
+    <p>Press <code class="language-plaintext highlighter-rouge">ctrl+X</code> for starting a single mode session</p>
+  </li>
+  <li>When single mode is started access to the system…:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chroot /sysroot
+</code></pre></div>    </div>
+  </li>
+  <li>And using passwd command change the root’s password:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd root
+</code></pre></div>    </div>
+  </li>
+  <li>Finally, it is necessary to update SELinux information by createing an empty <strong>.autorelabel</strong> in <code class="language-plaintext highlighter-rouge">/</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch /.autorelabel
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Exit from single mode session</p>
+  </li>
+  <li>Try to login using a new password</li>
+</ul>
+:ET
