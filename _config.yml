@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
 description              : "."
-baseurl                  : "/site"
+baseurl                  : "/languages"
 url                      : "https://votamrima.github.io"
 #url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
