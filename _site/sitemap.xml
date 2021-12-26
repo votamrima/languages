@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/languages/test-test/</loc>
+<loc>http://localhost:4001/test-test/</loc>
 <lastmod>2021-12-26T11:30:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/languages/_pages/about/</loc>
+<loc>http://localhost:4001/_pages/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/languages/</loc>
+<loc>http://localhost:4001/_pages/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/languages/tags/</loc>
+<loc>http://localhost:4001/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/languages/tags/</loc>
+<loc>http://localhost:4001/tags/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/languages/year-archive/</loc>
+<loc>http://localhost:4001/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4001/year-archive/</loc>
 </url>
 </urlset>

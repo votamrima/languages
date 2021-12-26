@@ -20,8 +20,8 @@ title                    : ""
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
-description              : "."
-baseurl                  : "/languages"
+description              : [Language notes]
+baseurl                  : ""
 url                      : "https://votamrima.github.io"
 #url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -30,7 +30,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-breadcrumbs              : true
+breadcrumbs              : false
 breadcrumb_home_label : "Home"
 breadcrumb_separator  : "/"
 words_per_minute         : 200
@@ -300,18 +300,13 @@ defaults:
       sidebar:
         nav: "docs"
   - scope:
-      path: "_pages"
+      path: ""
       type: pages
     values:
       sidebar:
+        layout: home
         nav: "docs"
-  - scope: #Updated on 26.12.2021
-      path: "/"
-      type: archive
-    values:
-      sidebar:
-        nav: "docs"
-          
+         
 
 toc: true
 #include: ["_pages"]
