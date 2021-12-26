@@ -1,6 +1,0 @@
-I"x<ol>
-  <li>cleanly and gracefully killing all tmux opened sessions and server too:
-```
-tmux kill-server</li>
-</ol>
-:ET

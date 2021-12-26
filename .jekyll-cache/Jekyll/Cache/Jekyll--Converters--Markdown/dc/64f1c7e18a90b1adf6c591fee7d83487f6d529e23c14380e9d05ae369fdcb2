@@ -1,6 +1,0 @@
-I"b<h3 id="creating-a-vm">Creating a VM</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vagrant init</code> – Initialize Vagrant with a Vagrantfile and ./.vagrant directory, using no specified base image. Beforeyou can do vagrant up, you’ll need to specify a base image in the Vagrantfile.</li>
-  <li><code class="language-plaintext highlighter-rouge">vagrant init</code> – Initialize Vagrant with a specific box. To find a box, go to the public Vagrant box catalog. When you find one you like, just replace it’s name with boxpath. For example, vagrant init ubuntu/trusty64.</li>
-</ul>
-:ET

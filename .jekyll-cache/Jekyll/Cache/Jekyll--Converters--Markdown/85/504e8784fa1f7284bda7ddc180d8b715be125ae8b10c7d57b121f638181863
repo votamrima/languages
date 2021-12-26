@@ -1,3 +1,0 @@
-I")<h3 id="using-default-user">Using default user</h3>
-<p>During installation Openshift creates default <em>kubeadmin</em> with a password. Password you can find in installation folder: <code class="language-plaintext highlighter-rouge">&lt;installation_folder&gt;/auth/kubeadmin-password</code></p>
-:ET
